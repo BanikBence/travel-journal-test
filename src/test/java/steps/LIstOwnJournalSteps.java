@@ -3,6 +3,7 @@ package steps;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
 import pages.BasePage;
 import pages.LoginPage;
@@ -24,7 +25,7 @@ public class LIstOwnJournalSteps {
 
     @Given("I log in to the site as {string}")
     public void iLogInToTheSiteAs(String url) {
-        loginPage.navigateToSite(url);
+            loginPage.navigateToSite(url);
 
     }
 
@@ -41,7 +42,6 @@ public class LIstOwnJournalSteps {
         Assertions.assertTrue(mainPage.isJournalPresent());
         WebDriverManager.quitDriver();
     }
-
 
 }
 
