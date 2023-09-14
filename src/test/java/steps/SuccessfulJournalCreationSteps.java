@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Assertions;
 import pages.LoginPage;
 import pages.MainPage;
 import pages.StartPage;
+import util.WebDriverManager;
 
 public class SuccessfulJournalCreationSteps {
     private LoginPage loginPage;
@@ -44,7 +45,8 @@ public class SuccessfulJournalCreationSteps {
     @Then("I will see the new journal with the data I put in")
     public void iWillSeeTheNewJournalWithTheDataIPutIn() {
         Assertions.assertTrue(mainPage.getCreatedJournal().contains("magical"));
-//        mainPage.deleteJournal();
+        // mainPage.deleteJournal();
+        WebDriverManager.quitDriver();
     }
 
 }

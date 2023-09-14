@@ -40,7 +40,7 @@ public class LIstOwnJournalSteps {
     @Then("I should see the journal as {string}")
     public void iShouldSeeTheJournalAs(String journals) {
         Assertions.assertTrue(mainPage.isJournalPresent());
-        WebDriverManager.quitDriver();
+       // WebDriverManager.quitDriver();
     }
 
 }
